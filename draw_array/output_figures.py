@@ -32,22 +32,10 @@ def draw_shape(sides, length):
     end_fill()
 
 def draw_matrix(matrix):
-    startX = -200
-    startY = 200
-    shapeSide = 50
-    for row in range(len(matrix)):
-        for col in range(len(matrix[row])):
-            cell = matrix[row][col]
-            if cell == 1:
-                fillcolor("violet")
-            else:
-                fillcolor("gray")
-            curX = startX + shapeSide * col
-            curY = startY - shapeSide * row
-            goto(curX, curY)
-            draw_shape(4, shapeSide)
+    print("Write here your code")
 
-matrix = [[0, 0, 0, 0, 0, 0, 0, 0],
+matrix = [
+          [0, 0, 0, 0, 0, 0, 0, 0],
           [0, 1, 1, 0, 0, 1, 1, 0],
           [1, 1, 1, 1, 1, 1, 1, 1],
           [0, 1, 1, 0, 0, 1, 1, 0],
