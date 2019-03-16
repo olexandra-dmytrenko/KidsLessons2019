@@ -1,28 +1,5 @@
 from turtle import *
 
-
-# def draw_square():
-#     color('black', 'red')
-#     forward(50)
-#     left(90)
-#     forward(50)
-#     left(90)
-#     forward(50)
-#     left(90)
-#     forward(50)
-#     left(90)
-
-# def draw_spiral(radius):
-#     original_xcor = xcor()
-#     original_ycor = ycor()
-#     speed = 1
-#     while True:
-#         forward(speed)
-#         left(10)
-#         speed += 0.1
-#         if distance(original_xcor, original_ycor) > radius:
-#             break
-
 def draw_shape(sides, length):
     begin_fill()
     for _ in range(sides):
