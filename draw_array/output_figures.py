@@ -28,10 +28,13 @@ def draw_shape(sides, length):
     for _ in range(sides):
         forward(length)
         right(360 / sides)
-        #fillcolor("green")
+        # fillcolor("green")
     end_fill()
 
+
 def draw_matrix(matrix):
+    color('yellow')
+    speed(100)
     startX = -200
     startY = 200
     shapeSide = 50
@@ -44,25 +47,71 @@ def draw_matrix(matrix):
                 fillcolor("gray")
             curX = startX + shapeSide * col
             curY = startY - shapeSide * row
+            penup()
             goto(curX, curY)
+            pendown()
             draw_shape(4, shapeSide)
 
-matrix = [[0, 0, 0, 0, 0, 0, 0, 0],
-          [0, 1, 1, 0, 0, 1, 1, 0],
-          [1, 1, 1, 1, 1, 1, 1, 1],
-          [0, 1, 1, 0, 0, 1, 1, 0],
-          [0, 0, 0, 0, 0, 0, 0, 0],
-          [0, 1, 0, 0, 0, 0, 1, 0],
-          [0, 0, 1, 0, 0, 1, 0, 0],
-          [0, 0, 0, 1, 1, 0, 0, 0]
-         ]
+def draw_anime(arrayOfMatrix):
+    for matrix in arrayOfMatrix:
+        draw_matrix(matrix)
+        # clear()
 
-setup (width=600, height=600, startx=0, starty=0)
-color('yellow')
+matrixSmile = \
+    [
+        [0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 1, 1, 0, 0, 1, 1, 0],
+        [1, 1, 1, 1, 1, 1, 1, 1],
+        [0, 1, 1, 0, 0, 1, 1, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 1, 0, 0, 0, 0, 1, 0],
+        [0, 0, 1, 0, 0, 1, 0, 0],
+        [0, 0, 0, 1, 1, 0, 0, 0]
+    ]
+
+matrixMidSmileGlassesOn = \
+    [
+        [0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 1, 1, 0, 0, 1, 1, 0],
+        [1, 1, 1, 1, 1, 1, 1, 1],
+        [0, 1, 1, 0, 0, 1, 1, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 1, 0, 0, 1, 0, 0],
+        [0, 0, 0, 1, 1, 0, 0, 0]
+    ]
+
+matrixMidSmile = \
+    [
+        [0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 1, 1, 0, 0, 1, 1, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 1, 1, 1, 1, 0, 0],
+        [0, 0, 0, 1, 1, 0, 0, 0]
+    ]
+
+matrixNoSmile = \
+    [
+        [0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 1, 1, 0, 0, 1, 1, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 1, 1, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0]
+    ]
+
+smileAnime = [matrixNoSmile, matrixMidSmile, matrixMidSmileGlassesOn, matrixSmile]
+
+setup(width=600, height=600, startx=0, starty=0)
+
 # shape("turtle")
 hideturtle()
 
-speed(30)
-draw_matrix(matrix)
+draw_anime(smileAnime)
 
 exitonclick()
