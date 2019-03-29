@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Виправіть логічні помилки у методі draw_matrix у else-if блоці
+Виправіть синтаксичні помилки у методі draw_matrix
 """
-
 import turtle as t
 
 def draw_shape(sides, length):
@@ -24,20 +23,20 @@ def draw_matrix(matrix):
 
     shapeSide = 50
 
-    for row in range(len(matrix)):
-        for col in range(len(matrix[row])):
+    for row in range(len(matrix))
+        for col in range(len(matrix[row]))
             cell = matrix[row][col]
 
-            if cell == 1:
+            if cell == 1
                 t.color("black")
                 t.fillcolor("black")
-            elif cell == 2:
+            elif cell == 2
                 t.color("red")
                 t.fillcolor("red")
-            elif cell == 3:
+            elif cell == 3
                 t.color("blue")
                 t.fillcolor("blue")
-            else:
+            else
                 t.color("yellow")
                 t.fillcolor("yellow")
 

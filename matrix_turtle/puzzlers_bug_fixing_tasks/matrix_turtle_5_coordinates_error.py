@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Виправіть логічні помилки у методі draw_matrix у формулах розрахунку координат
+Виправіть логічні помилки у методі draw_matrix у координатах у та формулі
 """
-
 import turtle as t
 
 def draw_shape(sides, length):
@@ -20,7 +19,7 @@ def draw_matrix(matrix):
     t.speed(100)
 
     startX = -200
-    startY = 200
+    startY = -200
 
     shapeSide = 50
 
@@ -47,8 +46,8 @@ def draw_matrix(matrix):
                 t.color("yellow")
                 t.fillcolor("yellow")
 
-            curX = startX + shapeSide * row + row * 2
-            curY = startY - shapeSide * col - col * 2
+            curX = startX + shapeSide * col + col * 2
+            curY = startY + shapeSide * row + row * 2
 
             t.penup()
             t.goto(curX, curY)

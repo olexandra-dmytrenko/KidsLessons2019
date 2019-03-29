@@ -24,8 +24,8 @@ def draw_matrix(matrix):
 
     shapeSide = 50
 
-    for row in range(len(matrix)):
-        for col in range(len(matrix[row])):
+    for col in range(len(matrix[row])):
+        for row in range(len(matrix)):
             cell = matrix[row][col]
 
             if cell == 1:
