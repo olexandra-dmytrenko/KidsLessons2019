@@ -1,0 +1,34 @@
+
+import turtle as t
+
+def draw_shape(sides, length):
+    t.begin_fill()
+    for _ in range(sides):
+        t.forward(length)
+        t.right(360 / sides)
+        #fillcolor("green")
+    t.end_fill()
+
+def draw_matrix(matrix):
+    print("Write here your code")
+
+matrix = [
+          [0, 0, 0, 0, 0, 0, 0, 0],
+          [0, 1, 1, 0, 0, 1, 1, 0],
+          [1, 1, 1, 1, 1, 1, 1, 1],
+          [0, 1, 1, 0, 0, 1, 1, 0],
+          [0, 0, 0, 0, 0, 0, 0, 0],
+          [0, 1, 0, 0, 0, 0, 1, 0],
+          [0, 0, 1, 0, 0, 1, 0, 0],
+          [0, 0, 0, 1, 1, 0, 0, 0]
+         ]
+
+t.setup (width=600, height=600, startx=0, starty=0)
+t.color('yellow')
+# shape("turtle")
+t.hideturtle()
+
+t.speed(30)
+draw_matrix(matrix)
+
+t.exitonclick()
