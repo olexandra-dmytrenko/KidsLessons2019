@@ -55,28 +55,26 @@ def draw_flower_scuared(size, start_x, start_y):
     draw_square('yellow', size)
     t.goto(start_x + size, start_y + size)
     draw_square('purple', size)
-    t.goto(start_x -size, start_y-size)
+    t.goto(start_x - size, start_y - size)
     draw_square('orange', size)
-    t.goto(start_x -size, start_y + size)
+    t.goto(start_x - size, start_y + size)
     draw_square('pink', size)
-    t.goto(start_x + size, start_y-size)
+    t.goto(start_x + size, start_y - size)
     draw_square('blue', size)
 
 
-
-width=600
-height=600
+width = 600
+height = 600
 t.setup(width=width, height=height, startx=450, starty=100)
 t.speed(35)
 
 draw_sun()
 
 flower_size = 20
-
-cur_width = -width/2
-for number in range(int(width/(3*flower_size))):
+cur_width = -width / 2
+for number in range(int(width / (3 * flower_size))):
     draw_flower_scuared(flower_size, cur_width + flower_size + 10, 0)
-    cur_width = cur_width + 3* flower_size + 10
+    cur_width = cur_width + 3 * flower_size + 10
 
 t.shape("turtle")
 t.hideturtle()
